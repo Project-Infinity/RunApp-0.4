@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment
         myActiveUser = dbHandler.setUser();
         Integer userID = myActiveUser.getUserID();
 
-        History [] newHistory = dbHandler.history(userID, 10);
+        History [] newHistory = dbHandler.history(userID, 3);
 
         ArrayAdapter<History> adapter = new ArrayAdapter<>(getActivity(),
                 R.layout.list_items, R.id.list_item, newHistory);
@@ -108,7 +108,7 @@ public class HomeFragment extends Fragment
 
         Integer userID = myActiveUser.getUserID();
 
-        AssignedWorkouts[] newWorkouts = dbHandler.workouts(userID, 10);
+        AssignedWorkouts[] newWorkouts = dbHandler.workouts(userID, 3);
 
         ArrayAdapter<AssignedWorkouts> adapter = new ArrayAdapter<AssignedWorkouts>(getActivity(),
                 R.layout.list_items, R.id.list_item, newWorkouts);
